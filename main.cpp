@@ -49,19 +49,21 @@ int main()
 
 		areadejogo();
 		mostrar();
-		estadojogo=0;
-		while (estadojogo==0)
+		while (true)
 		{
+			estadojogo=0;
 			x=escolherjogada(1);
 			if(x==3)
 			{
 				break;
 			}
+			igualar();
 			estadojogo=vd();
                         if (estadojogo==1)
                         {
                                 std::cout<<"VITÓRIA"<<std::flush;
                                 placar[0]++;
+				break;
                         }
 			jogadamaquina();
 			mostrar();
@@ -70,11 +72,13 @@ int main()
 			{
 				std::cout<<"DERROTA"<<std::flush;
 				placar[1]++;
+				break;
 			}
 			if(estadojogo==3)
 			{
 				std::cout<<"EMPATE"<<std::flush;
 				placar[2]++;
+				break;
 			}
 			
 			
