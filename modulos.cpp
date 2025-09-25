@@ -311,9 +311,9 @@ int menuprincipal()
 	printf("\nBem vindo ao JOGO DA VELHA");
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 	printf("\n");
-	printf("Escolha uma opcao");
-	printf("\n0 - Jogar jogador x máquina");
-	printf("\n1 - Jogar jogador x jogador");
+	printf("Escolha uma opção");
+	printf("\n0 - Jogar JOGADOR x MÁQUINA");
+	printf("\n1 - Jogar JOGADOR x JOGADOR");
 	printf("\n2 - Sair");
 	printf("\n-------------------------\n");
 	while(true)
@@ -336,7 +336,7 @@ int menupvp()
         printf("\nJOGADOR CONTRA JOGADOR");
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         printf("\n");
-        printf("Escolha uma opcao");
+        printf("Escolha uma opção");
         printf("\n0 - Jogar");
         printf("\n1 - Sair");
         printf("\n2 - Placar");
@@ -360,7 +360,7 @@ int menupm()
         printf("\nJOGANDO CONTRA A MÁQUINA");
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         printf("\n");
-        printf("Escolha uma opcao");
+        printf("Escolha uma opção");
         printf("\n0 - Jogar");
 	printf("\n1 - Sair");
         printf("\n2 - Placar");

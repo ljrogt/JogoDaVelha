@@ -33,7 +33,7 @@ int main()
 			std::cout<<"\n=-=-=-=-=-=-"<<std::flush;
 			std::cout<<"\nPLACAR GERAL"<<std::flush;
 			std::cout<<"\n=-=-=-=-=-=-"<<std::flush;
-			std::cout<<"\nMaquina("<<placar[1]<<")xJogador("<<placar[0]<<")|Empate("<<placar[2]<<")"<<std::flush;
+			std::cout<<"\nMáquina("<<placar[1]<<")xJogador("<<placar[0]<<")|Empate("<<placar[2]<<")"<<std::flush;
 			std::this_thread::sleep_for(std::chrono::seconds(3));
                         funcionamento=menupm();
 			if(funcionamento==1)
@@ -79,7 +79,13 @@ int main()
 			
 			
 		}
+		if(x==3)
+		{
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+		}
+		else{
 		std::this_thread::sleep_for(std::chrono::seconds(3));
+		}
 	}
 	while (jogo==1)
         {
@@ -144,7 +150,14 @@ int main()
                         }
 		}
 		fo:
+		if(x==3)
+                {
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
+                }
+                else{
                 std::this_thread::sleep_for(std::chrono::seconds(3));
+                }
+
         }
 
 	if (jogo==2)
