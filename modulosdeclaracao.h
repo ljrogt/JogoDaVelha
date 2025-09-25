@@ -5,10 +5,14 @@ using namespace std;
 
 void areadejogo();
 void mostrar();
-void escolherjogada(int x, int y);
-int menu();
+int escolherjogada(int p);
+int menuprincipal();
+int menupvp();
+void igualar();
+int menupm();
 int verificacao(string matriz, int n);
 void jogadamaquina();
 int vd();
+void rodarjogo();
 #endif
 

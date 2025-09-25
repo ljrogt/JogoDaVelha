@@ -11,6 +11,19 @@ using namespace std;
 int area[3][3],linha,coluna;
 string matriztexto="";
 
+
+void igualar()
+{
+	int i,j;
+	matriztexto="";
+	for (i=0;i<=2;i++)
+        {
+                for (j=0;j<=2;j++)
+                {
+                        matriztexto=matriztexto+std::to_string(area[i][j]);
+                }
+        }
+}
 std::string parabase3(int n);
 
 std::string parabase3(int n) {
@@ -53,13 +66,7 @@ void jogadamaquina()
 	{
 		p[i]=0;
 	}
-	for (i=0;i<=2;i++)
-	{
-		for (j=0;j<=2;j++)
-		{
-			matriztexto=matriztexto+std::to_string(area[i][j]);
-		}
-	}
+	igualar();
 	l=matriztexto.size();
 	cout << "Pensando." << flush;
        	for (i=0;i<3;i++)
@@ -271,26 +278,32 @@ void mostrar()
         }
 }
 
-void escolherjogada(int x, int y)
+int escolherjogada(int p)
 {
-
+	int x,y;
+	printf("Você joga com o '%d', escolha a posição que quer jogar(escolha '3' se quiser parar)!\n",p);
 	while (true)
 	{
-		if (area[x][y]==0)
-		{
-			area[x][y]=1;
-			break;
-		}
 		printf("Linha:");
 		scanf("%d",&x);
+		if(x==3)
+		{
+			return x;
+		}
 		printf("Coluna:");
 		scanf("%d",&y);
+		if (area[x][y]==0)
+		{
+			area[x][y]=p;
+			break;
+		}
 	}
 	mostrar();
+	return 0;
 }
 
 
-int menu()
+int menuprincipal()
 {
 	int escolha;
 	system("clear");
@@ -299,18 +312,66 @@ int menu()
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 	printf("\n");
 	printf("Escolha uma opcao");
-	printf("\n0 - Jogar");
-	printf("\n1 - Sair");
-	printf("\n2 - Placar");
+	printf("\n0 - Jogar jogador x máquina");
+	printf("\n1 - Jogar jogador x jogador");
+	printf("\n2 - Sair");
 	printf("\n-------------------------\n");
 	while(true)
 	{
 		scanf("%d",&escolha);
-		if(escolha<3&&escolha>=0)
+		if(escolha==1||escolha==0||escolha==2)
 		{
 			break;
 		}
 	};
 	return escolha;
 
+}
+
+int menupvp()
+{
+	int escolha;
+        system("clear");
+        printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        printf("\nJOGADOR CONTRA JOGADOR");
+        printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        printf("\n");
+        printf("Escolha uma opcao");
+        printf("\n0 - Jogar");
+        printf("\n1 - Sair");
+        printf("\n2 - Placar");
+        printf("\n-------------------------\n");
+        while(true)
+        {
+                scanf("%d",&escolha);
+                if(escolha==1||escolha==0||escolha==2)
+                {
+                        break;
+                }
+        };
+        return escolha;
+}
+
+int menupm()
+{
+	int escolha;
+        system("clear");
+        printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        printf("\nJOGANDO CONTRA A MÁQUINA");
+        printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        printf("\n");
+        printf("Escolha uma opcao");
+        printf("\n0 - Jogar");
+	printf("\n1 - Sair");
+        printf("\n2 - Placar");
+        printf("\n-------------------------\n");
+        while(true)
+        {
+                scanf("%d",&escolha);
+                if(escolha==1||escolha==0||escolha==2)
+                {
+                        break;
+                }
+        };
+        return escolha;
 }
