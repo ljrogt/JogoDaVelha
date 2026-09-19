@@ -1,0 +1,1 @@
+Pequeno projeto para um trabalho da faculdade. Consiste em um aplicação no terminal que simula um jogo da velha. O usuário joga com a máquina ou com outra pessoa. A máquina faz jogadas "inteligentes", no caso ela faz a jogada baseando se em uma probabilidade de ganho.
